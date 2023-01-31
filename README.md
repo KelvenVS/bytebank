@@ -1,4 +1,18 @@
-# Bytebank
+<h1 aligh="center">Primeiro projeto em Angular - Bytebank <h1>
+
+<p align="center">
+<img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge"/>
+</p>
+
+<h2>Descrição do Projeto</h2>
+
+É necessário ter NodeJS 18.xx e angularCLI 15.1.3
+
+#
+
+Projeto em desenvolvimento focado em meus estudos no Angular...
+
+#
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.3.
 
