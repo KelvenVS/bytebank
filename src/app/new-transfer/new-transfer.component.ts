@@ -1,10 +1,12 @@
-import { Component } from "@angular/core";
+import { Component } from '@angular/core';
 
-@Component ({
+@Component({
   selector: 'app-new-transfer',
   templateUrl: './new-transfer.component.html',
-  styleUrls:['./new-transfer.component.scss']
+  styleUrls: ['./new-transfer.component.scss'],
 })
 export class newTransferComponent {
-
+  transfer() {
+    console.log('Solicitado nova transferencia');
+  }
 }
