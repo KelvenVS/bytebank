@@ -15,6 +15,6 @@ export class newTransferComponent {
   transfer() {
     console.log('Solicitado nova transferencia');
     const valueEmit = {value : this.value , destiny : this.destiny}
-   this.whenTransferring.emit()
+   this.whenTransferring.emit(valueEmit)
   }
 }
