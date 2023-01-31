@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-new-transfer',
@@ -7,13 +7,14 @@ import { Component } from '@angular/core';
 })
 export class newTransferComponent {
 
+  @Output() whenTransferring = new EventEmitter<any>();
+
   value : number;
   destiny : number;
 
   transfer() {
     console.log('Solicitado nova transferencia');
-    console.log('Valor', this.value);
-    console.log('Destino', this.destiny);
-
+    const valueEmit = {value : this.value , destiny : this.destiny}
+   this.whenTransferring.emit()
   }
 }
