@@ -7,8 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'bytebank';
+  destiny: number;
+  value: number;
 
   transferPage($event){
     console.log($event);
+    this.destiny = $event.destiny;
+    this.value = $event.value;
   }
 }
