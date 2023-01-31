@@ -6,7 +6,7 @@ import { Component, Input, NgModule } from '@angular/core';
   styleUrls: ['./extract.component.scss']
 })
 export class ExtractComponent {
-  @Input() transferData : any;
+  @Input() transferDatas: any[];
 
   constructor () {}
 }
