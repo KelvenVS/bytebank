@@ -11,6 +11,7 @@ export class AppComponent {
 
   transferPage($event){
     console.log($event);
-    this.transferDatas.push($event);
+    const transfer = {...$event,date: new Date()}
+    this.transferDatas.push(transfer);
   }
 }
