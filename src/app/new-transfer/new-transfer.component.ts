@@ -16,5 +16,12 @@ export class newTransferComponent {
     console.log('Solicitado nova transferencia');
     const valueEmit = {value : this.value , destiny : this.destiny}
    this.whenTransferring.emit(valueEmit)
+   this.cleanField();
   }
+
+  cleanField() {
+    this.value = 0;
+    this.destiny = 0;
+  }
+
 }
