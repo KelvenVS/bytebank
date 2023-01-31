@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, NgModule } from '@angular/core';
 
 @Component({
   selector: 'app-extract',
@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./extract.component.scss']
 })
 export class ExtractComponent {
+  @Input() transferData : any;
 
+  constructor () {}
 }
