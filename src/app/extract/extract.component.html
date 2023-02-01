@@ -1,14 +1,14 @@
-<table>
-  <thead>
-    <th>Data</th>
-    <th>Destino</th>
-    <th>Valor</th>
+<table class="tabela">
+  <thead class="tabela__cabecalho">
+    <th class="tabela__cabecalho__conteudo">Data</th>
+    <th class="tabela__cabecalho__conteudo">Destino</th>
+    <th class="tabela__cabecalho__conteudo">Valor</th>
   </thead>
   <tbody>
-    <tr *ngFor="let transfer of transferDatas">
-    <td>{{transfer?.date | date : 'short'}}</td>
-    <td>{{transfer?.destiny}}</td>
-    <td>{{transfer?.value}}</td>
+    <tr class="tabela__linha" *ngFor="let transfer of transferDatas">
+    <td class="tabela__conteudo">{{transfer?.date | date : 'short'}}</td>
+    <td class="tabela__conteudo">{{transfer?.destiny}}</td>
+    <td class="tabela__conteudo">{{transfer?.value | currency : ''}}</td>
     </tr>
   </tbody>
 </table>
