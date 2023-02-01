@@ -1,12 +1,12 @@
 <table>
   <thead>
     <th>Data</th>
-    <th>Valor</th>
     <th>Destino</th>
+    <th>Valor</th>
   </thead>
   <tbody>
     <tr *ngFor="let transfer of transferDatas">
-    <td>{{transfer?.date}}</td>
+    <td>{{transfer?.date | date : 'short'}}</td>
     <td>{{transfer?.destiny}}</td>
     <td>{{transfer?.value}}</td>
     </tr>
