@@ -4,7 +4,8 @@
     <th class="tabela__cabecalho__conteudo">Destino</th>
     <th class="tabela__cabecalho__conteudo">Valor</th>
   </thead>
-  <tbody>
+  <tbody *ngIf="transferDatas?.length == 0
+            && transferDatas?.length > 0  ; else emptyList">
     <tr class="tabela__linha" *ngFor="let transfer of transferDatas">
     <td class="tabela__conteudo">{{transfer?.date | date : 'short'}}</td>
     <td class="tabela__conteudo">{{transfer?.destiny}}</td>
@@ -12,4 +13,6 @@
     </tr>
   </tbody>
 </table>
-
+<ng-template #emptyList>
+  <p>Nenhum operação cadastrada</p>
+</ng-template>
