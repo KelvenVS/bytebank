@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class TransferService {
-  private listTransfer : any[];
+  private listTransfer: any[];
 
 constructor() {
   this.listTransfer = [];

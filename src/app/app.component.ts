@@ -8,10 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'bytebank';
+  transferencias: any[] = [];
 
   constructor(private service: TransferService) {}
 
   transfer($event) {
-  this.service.addBank($event)
+    this.service.addBank($event);
   }
 }
