@@ -1,17 +1,25 @@
+import { Transferencia } from './../../../models/transfer.model';
 import { Injectable } from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import { Observable } from 'rxjs/internal/Observable';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TransferService {
   private listTransfer: any[];
+  private url = 'http://localhost:3000/transferencias';
 
-constructor() {
+constructor(private httpClient: HttpClient) {
   this.listTransfer = [];
  }
 
   get transfer() {
   return this.listTransfer;
+ }
+
+ allTransfer(): Observable<Transferencia[]>{
+  return this.httpClient.get<Transferencia[]>(this.url);
  }
 
  addBank(transfer: any) {

@@ -1,8 +1,8 @@
   export interface Transferencia {
-      id: string;
+      id?: string;
       value: number;
       destiny: string;
-      date: Date;
+      date?: Date;
   }
 
   export interface RootObject {
