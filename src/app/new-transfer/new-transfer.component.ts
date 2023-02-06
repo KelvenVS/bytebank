@@ -26,7 +26,7 @@ export class newTransferComponent {
     this.service.addBank(valueEmit).subscribe(result => {
       console.log(result);
       this.cleanField();
-      this.router.navigate(['extract']);
+      this.router.navigateByUrl('extract');
     },
     (error) => console.log(error)
     );
