@@ -1,6 +1,8 @@
+
 import { Transferencia } from './../../../models/transfer.model';
 import { TransferService } from './../services/transfer.service';
 import { Component, EventEmitter, Output } from '@angular/core';
+import { Router } from'@angular/router';
 
 @Component({
   selector: 'app-new-transfer',
@@ -14,7 +16,7 @@ export class newTransferComponent {
   value : number;
   destiny : number;
 
-  constructor(private service: TransferService) {}
+  constructor(private service: TransferService, private router: Router) {}
 
   transfer() {
     console.log('Solicitado nova transferencia');
@@ -24,6 +26,7 @@ export class newTransferComponent {
     this.service.addBank(valueEmit).subscribe(result => {
       console.log(result);
       this.cleanField();
+      this.router.navigate(['extract']);
     },
     (error) => console.log(error)
     );
