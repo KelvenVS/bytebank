@@ -7,6 +7,19 @@
 <h2>Descrição do Projeto</h2>
 
 É necessário ter NodeJS 18.xx e angularCLI 15.1.3
+para rodar :
+
+#
+
+ng s -o 
+
+#
+
+npm install -g json-server
+
+# 
+
+json-server --watch db.json
 
 #
 
