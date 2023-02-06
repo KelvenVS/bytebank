@@ -22,9 +22,10 @@ constructor(private httpClient: HttpClient) {
   return this.httpClient.get<Transferencia[]>(this.url);
  }
 
- addBank(transfer: any) {
+ addBank(transfer: Transferencia): Observable<Transferencia> {
     this.hidratar(transfer);
-    this.listTransfer.push(transfer);
+    // this.listTransfer.push(transfer);
+    return this.httpClient.post<Transferencia>(this.url, transfer );
  }
 
  private hidratar(transfer: any){
