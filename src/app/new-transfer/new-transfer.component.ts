@@ -21,9 +21,12 @@ export class newTransferComponent {
     const valueEmit: Transferencia = {value : this.value , destiny : this.destiny}
   //  this.whenTransferring.emit(valueEmit);
 
-    this.service.addBank(valueEmit);
-
-   this.cleanField();
+    this.service.addBank(valueEmit).subscribe(result => {
+      console.log(result);
+      this.cleanField();
+    },
+    (error) => console.log(error)
+    );
   }
 
   cleanField() {
