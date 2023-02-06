@@ -1,3 +1,5 @@
+import { Transferencia } from './../../../models/transfer.model';
+import { TransferService } from './../services/transfer.service';
 import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
@@ -12,10 +14,15 @@ export class newTransferComponent {
   value : number;
   destiny : number;
 
+  constructor(private service: TransferService) {}
+
   transfer() {
     console.log('Solicitado nova transferencia');
-    const valueEmit = {value : this.value , destiny : this.destiny}
-   this.whenTransferring.emit(valueEmit)
+    const valueEmit: Transferencia = {value : this.value , destiny : this.destiny}
+  //  this.whenTransferring.emit(valueEmit);
+
+    this.service.addBank(valueEmit);
+
    this.cleanField();
   }
 
